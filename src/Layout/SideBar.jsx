@@ -29,7 +29,7 @@ export const SideBar = () => {
                     to="/home"
                     className='block'
                 >
-                <FontAwesomeIcon icon={faHome} color="#D9D9D9" className='mr-4 relative'/>
+                <FontAwesomeIcon icon={faHome} color="#D9D9D9" className='mr-4'/>
                 Informacion Personal
                 </NavLink>
 
