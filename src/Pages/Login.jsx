@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import line1 from '../Assets/Img/Line1.png'
 import mapmetro from '../Assets/Img/map.png'
+import { useSelector } from "react-redux";
 
 export const Login = () => {
 
@@ -8,6 +9,14 @@ export const Login = () => {
 
   const ActivateButton = () =>{
     setButton(!button);
+  }
+
+  const Register = () =>{
+
+  }
+
+  const Login = ()=>{
+
   }
 
   return (
