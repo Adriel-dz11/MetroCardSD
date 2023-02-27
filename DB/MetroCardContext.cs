@@ -12,11 +12,13 @@ namespace DB
         }
 
         public DbSet<Users> Usuarios { get; set; }
+        public DbSet<InternalCards> InternalCards { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Users>().ToTable("Users");
+            modelBuilder.Entity<InternalCards>().ToTable("InternalCards");
         }
 
     }
