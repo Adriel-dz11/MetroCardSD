@@ -87,3 +87,5 @@ C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\refint\WebApi.dll
 C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\WebApi.pdb
 C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
