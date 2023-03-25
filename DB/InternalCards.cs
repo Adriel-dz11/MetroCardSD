@@ -17,5 +17,8 @@ namespace DB
         public int Travels { get; set; }
         public bool IsValid { get; set; }
 
+        [ForeignKey("UserID")]
+        public virtual Users Users { get; set; }
+
     }
 }

@@ -89,3 +89,13 @@ C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconf
 C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\ref\WebApi.dll
 C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.csproj.AssemblyReference.cache
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.dll
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\refint\WebApi.dll
+C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\WebApi\obj\Debug\net6.0\WebApi.pdb

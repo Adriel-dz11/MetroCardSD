@@ -3509,19 +3509,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Clara\\.nuget\\packages\\": {}
+    "C:\\Users\\default.LAPTOP-21O79P2R\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\DB.csproj",
+      "projectUniqueName": "C:\\Users\\default.LAPTOP-21O79P2R\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Documentos\\GitHub\\MetroCardSD\\DB\\DB.csproj",
       "projectName": "DB",
-      "projectPath": "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\DB.csproj",
-      "packagesPath": "C:\\Users\\Clara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\obj\\",
+      "projectPath": "C:\\Users\\default.LAPTOP-21O79P2R\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Documentos\\GitHub\\MetroCardSD\\DB\\DB.csproj",
+      "packagesPath": "C:\\Users\\default.LAPTOP-21O79P2R\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\default.LAPTOP-21O79P2R\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\Documentos\\GitHub\\MetroCardSD\\DB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Clara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\default.LAPTOP-21O79P2R\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
