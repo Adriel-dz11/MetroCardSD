@@ -22,7 +22,7 @@ namespace WebApi.Controllers
             Users users = Users.DB().Where(x => x.User == User && x.Password == Password).FirstOrDefault();
 
             if(users == null)
-            {
+    {
                 return new
                 {
                     success = false,
@@ -33,6 +33,6 @@ namespace WebApi.Controllers
 
             var Jwt = _Configuration.GetSection("Jwt").Get <JwtDto>(); 
 
-        }
     }
+}
 }
