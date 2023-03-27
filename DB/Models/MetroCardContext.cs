@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace DB
+namespace DB.Models
 {
-    public class MetroCardContext : DbContext 
+    public class MetroCardContext : DbContext
     {
         public MetroCardContext(DbContextOptions<MetroCardContext> options)
             : base(options)
