@@ -10,7 +10,7 @@ using WebApi.Dto;
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("User")]
+    [Route("user")]
     public class UsersController : ControllerBase
     {
         public IConfiguration _Configuration;
@@ -21,7 +21,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("Login")]
+        [Route("login")]
         public dynamic Login([FromBody] Object optData)
         {
             var data = JsonConvert.DeserializeObject<dynamic>(optData.ToString());
@@ -47,7 +47,7 @@ namespace WebApi.Controllers
                 new Claim(JwtRegisteredClaimNames.Sub, Jwt.Subjec),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                new Claim("id", users.Id_User),
+                new Claim("Id", users.Id_User.ToString()),
                 new Claim("usuario", users.User),
             };
 
