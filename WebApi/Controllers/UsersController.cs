@@ -1,4 +1,5 @@
 ﻿using DB;
+using DB.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
@@ -14,21 +15,23 @@ namespace WebApi.Controllers
     public class UsersController : ControllerBase
     {
         public IConfiguration _Configuration;
-        public UsersController(IConfiguration Configuration) 
+        private readonly IRepository<Users> _repository;
+        public UsersController(IConfiguration Configuration, IRepository<Users> repository) 
         {
             _Configuration = Configuration;
+            _repository = repository;
         
         }
 
-        [HttpPost]
-        [Route("login")]
-        public dynamic Login([FromBody] Object optData)
+    [HttpPost]
+    [Route("login")]
+        public dynamic Login([FromBody] LoginDto optData)
         {
-            var data = JsonConvert.DeserializeObject<dynamic>(optData.ToString());
-            string User = data.Users.ToString();
-            string Password = data.Password.ToString();
+            //var data = JsonConvert.DeserializeObject<dynamic>(optData.ToString());
+            string User = optData.User;
+            string Password = optData.password;
 
-            Users users = Users.DB().Where(x => x.User == User && x.Password == Password).FirstOrDefault();
+            Users users = _repository.GetFirstOrDefault(x => x.User == User && x.Password == Password);
 
             if(users == null)
     {
