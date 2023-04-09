@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DB.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace DB.Models
+namespace DB
 {
     public class MetroCardContext : DbContext
     {
