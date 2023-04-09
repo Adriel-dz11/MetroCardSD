@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AutoMapper/1.1.0.118": {
+        "type": "package",
+        "compile": {
+          "lib/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/AutoMapper.dll": {}
+        }
+      },
       "Azure.Core/1.24.0": {
         "type": "package",
         "dependencies": {
@@ -44,6 +53,15 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "CompareNETObjects/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/KellermanSoftware.Compare-NET-Objects.dll": {}
+        },
+        "runtime": {
+          "lib/KellermanSoftware.Compare-NET-Objects.dll": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -666,6 +684,43 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Newtonsoft.Json/3.5.8": {
+        "type": "package",
+        "compile": {
+          "lib/35/Newtonsoft.Json.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/35/Newtonsoft.Json.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "NUnit/2.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
+      "Repository/1.0.7.8": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "(, )",
+          "CompareNETObjects": "(, )",
+          "NUnit": "2.6.3",
+          "Newtonsoft.Json": "(, )"
+        },
+        "compile": {
+          "lib/net45/Repository.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Repository.dll": {}
+        }
+      },
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
@@ -1159,6 +1214,18 @@
     }
   },
   "libraries": {
+    "AutoMapper/1.1.0.118": {
+      "sha512": "Qn0aw2Oi7lmi3cu125XdrgBoGBCJj2YA9nXo50RMcg6UyWRfGV+EIhcfDT0MrVBMYDgWjQv5fWkf9MYwM52U3A==",
+      "type": "package",
+      "path": "automapper/1.1.0.118",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.1.1.0.118.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/AutoMapper.dll"
+      ]
+    },
     "Azure.Core/1.24.0": {
       "sha512": "+/qI1j2oU1S4/nvxb2k/wDsol00iGf1AyJX5g3epV7eOpQEP/2xcgh/cxgKMeFgn3U2fmgSiBnQZdkV+l5y0Uw==",
       "type": "package",
@@ -1195,6 +1262,18 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "CompareNETObjects/1.3.0": {
+      "sha512": "0cKXD/KZFK4En2/qZFTXMuHZgkhy9DxfqqyOB3hBtaQHVQ8Tz2NDqGVu/ABasqfzrw7A8qa570zro6Z7JHyPxg==",
+      "type": "package",
+      "path": "comparenetobjects/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "comparenetobjects.1.3.0.nupkg.sha512",
+        "comparenetobjects.nuspec",
+        "lib/KellermanSoftware.Compare-NET-Objects.dll"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -2127,6 +2206,52 @@
         "lib/netstandard2.0/Mono.TextTemplating.dll",
         "mono.texttemplating.2.2.1.nupkg.sha512",
         "mono.texttemplating.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/3.5.8": {
+      "sha512": "Xmri4q9s1NjuiBtOFkWMU9sUZdw5V7kFSf3CQQ3TlDyzWQHo94d5cHNxsSlnezGAZSPfdEG5k7bOrkzTe6rUOQ==",
+      "type": "package",
+      "path": "newtonsoft.json/3.5.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/20/Newtonsoft.Json.Net20.dll",
+        "lib/20/Newtonsoft.Json.Net20.pdb",
+        "lib/20/Newtonsoft.Json.Net20.xml",
+        "lib/35/Newtonsoft.Json.dll",
+        "lib/35/Newtonsoft.Json.pdb",
+        "lib/35/Newtonsoft.Json.xml",
+        "lib/SL/Newtonsoft.Json.Silverlight.dll",
+        "lib/SL/Newtonsoft.Json.Silverlight.pdb",
+        "lib/SL/Newtonsoft.Json.Silverlight.xml",
+        "newtonsoft.json.3.5.8.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "NUnit/2.6.3": {
+      "sha512": "zGYW/N4U8H1Y6Xr6aGQZgaDtfpRJSlbx7A9Fg3WNUV3EKEUe1LwjnHw9NH81GVWYzKlOBLZmFp/q90YJwT2vzQ==",
+      "type": "package",
+      "path": "nunit/2.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "license.txt",
+        "nunit.2.6.3.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "Repository/1.0.7.8": {
+      "sha512": "CzhiiHQL/PA+UwjrhiGkRbQq0a430Xz9UOYbEb8oYSnqdcnh8FOxKUFedo4jRQQolpiq+2OxszT1VpwbJ2TWzA==",
+      "type": "package",
+      "path": "repository/1.0.7.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Repository.dll",
+        "repository.1.0.7.8.nupkg.sha512",
+        "repository.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -3505,7 +3630,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.3"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
+      "Repository >= 1.0.7.8"
     ]
   },
   "packageFolders": {
@@ -3556,6 +3682,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.3, )"
+          },
+          "Repository": {
+            "target": "Package",
+            "version": "[1.0.7.8, )"
           }
         },
         "imports": [
@@ -3577,5 +3707,87 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Repository 1.0.7.8 no proporciona un límite inferior inclusivo para la dependencia AutoMapper. Se resolvió una mejor coincidencia aproximada de AutoMapper 1.1.0.118.",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Repository 1.0.7.8 no proporciona un límite inferior inclusivo para la dependencia CompareNETObjects. Se resolvió una mejor coincidencia aproximada de CompareNETObjects 1.3.0.",
+      "libraryId": "CompareNETObjects",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Repository 1.0.7.8 no proporciona un límite inferior inclusivo para la dependencia Newtonsoft.Json. Se resolvió una mejor coincidencia aproximada de Newtonsoft.Json 3.5.8.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"AutoMapper 1.1.0.118\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"CompareNETObjects 1.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "CompareNETObjects",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Newtonsoft.Json 3.5.8\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"NUnit 2.6.3\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "NUnit",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Repository 1.0.7.8\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Repository",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

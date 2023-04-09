@@ -89,3 +89,7 @@ C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconf
 C:\Users\Clara\source\repos\WebApi\WebApi\obj\Debug\net6.0\ref\WebApi.dll
 C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\KellermanSoftware.Compare-NET-Objects.dll
+C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\nunit.framework.dll
+C:\Users\Clara\source\repos\WebApi\WebApi\bin\Debug\net6.0\Repository.dll
