@@ -11,10 +11,28 @@ import { Payments } from '../Pages/Payments'
 
 export const Route = () => {
 
-  const [login, setLogin] = useState(false)
+  const [login, setLogin] = useState(true)
   return (
     < BrowserRouter >
       {login ?
+      <>
+        <div className='menu'>
+          <SideBar />
+          <Header />
+        </div>
+      <div className="ml-[360px] mt-32">
+        <Routes>
+          <Router path='/' element={<Navigate to="/home" />} />
+          <Router path='/home' element={<Home />} />
+          <Router path='/account' element={<Account />} />
+          <Router path="/payments" element={<Payments />} />
+          <Router path="/cards" element={<Cards />} />
+          <Router path="/support" element={<Cards />} />
+          <Router path='*' element={<Error />} />
+        </Routes>
+      </div>
+      </>
+      :
       <>
         <div className='menu'>
           <SideBar />
@@ -24,16 +42,10 @@ export const Route = () => {
         <Routes>
           <Router path='/' element={<Navigate to="/login" />} />
           <Router path='/login' element={<Login />} />
-          <Router path='/home' element={<Home />} />
-          <Router path='/account' element={<Account />} />
-          <Router path="/payments" element={<Payments />} />
-          <Router path="/cards" element={<Cards />} />
-          <Router path='*' element={<Error />} />
+          <Router path='*' element={<Navigate to="/login" />} />
         </Routes>
       </div>
-      </>
-      :
-      <Login />}
+      </>}
 
 
     </BrowserRouter >

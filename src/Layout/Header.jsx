@@ -12,7 +12,7 @@ export const Header = () => {
                     exact="true"
                     activeclassname="active"
                     to="/home"
-                    className='block'
+                    className='block hover:scale-[1.1] hover:text-black transition'
                 >
                 Home
                 </NavLink>
@@ -20,7 +20,7 @@ export const Header = () => {
                 <NavLink
                     exact="true"
                     activeclassname="active"    
-                    className='block'
+                    className='block hover:scale-[1.1] hover:text-black transition'
                     to="/rfiles"
                 >
                     Dashboard
@@ -30,7 +30,7 @@ export const Header = () => {
                 <NavLink
                     exact="true"
                     activeclassname="active"
-                    className='block'
+                    className='block hover:scale-[1.1] hover:text-black transition'
                     to="/workspace"
                 >
                     About Us
@@ -39,7 +39,7 @@ export const Header = () => {
                 <NavLink
                     exact="true"
                     activeclassname="active"
-                    className='block'
+                    className='block hover:scale-[1.1] hover:text-black transition'
                     to="/account"
                 >
                     Contact Us
@@ -48,14 +48,14 @@ export const Header = () => {
                 <NavLink
                     exact="true"
                     activeclassname="active"
-                    className='block'
+                    className='block hover:scale-[1.1] hover:text-black transition'
                     to="/account"
                 >
                     Chat Online
                 </NavLink>
             </nav>
 
-            <button className='w-[166px] h-[40px] bg-[#181C32] mt-4 ml-[36%] text-[#D4D4D4] rounded-[25px]'>Cerrar Session</button>
+            <button className='w-[166px] h-[40px] bg-[#181C32] mt-4 ml-60 2xl:ml-100 text-[#FFFFFF] rounded-[25px]'>Cerrar Session</button>
         </div>
     </section>
   )

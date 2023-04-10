@@ -27,17 +27,28 @@ export const SideBar = () => {
                     exact="true"
                     activeclassname="active"
                     to="/home"
-                    className='block'
+                    className='block hover:scale-[1.1] hover:text-white transition'
                 >
-                <FontAwesomeIcon icon={faHome} color="#D9D9D9" className='mr-4'/>
+                <FontAwesomeIcon icon={faHome} color="#4d4d4e" className='mr-4'/>
+                Home
+                </NavLink>
+
+
+                <NavLink
+                    exact="true"
+                    activeclassname="active"
+                    to="/account"
+                    className='block hover:scale-[1.1] hover:text-white transition'
+                >
+                <FontAwesomeIcon icon={faUser} color="#4d4d4e" className='mr-4'/>
                 Informacion Personal
                 </NavLink>
 
                 <NavLink
                     exact="true"
                     activeclassname="active"    
-                    className='block'
-                    to="/rfiles"
+                    className='block hover:scale-[1.1] hover:text-white transition'
+                    to="/cards"
                 >
                     <FontAwesomeIcon icon={faFileAlt} color="#4d4d4e" className='mr-4'/>
                     Tarjetas
@@ -47,8 +58,8 @@ export const SideBar = () => {
                 <NavLink
                     exact="true"
                     activeclassname="active"
-                    className='block'
-                    to="/workspace"
+                    className='block hover:scale-[1.1] hover:text-white transition'
+                    to="/payments"
                 >
                     <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" className='mr-4' />
                     Metodos de Pago
@@ -57,21 +68,11 @@ export const SideBar = () => {
                 <NavLink
                     exact="true"
                     activeclassname="active"
-                    className='block'
-                    to="/account"
+                    className='block hover:scale-[1.1] hover:text-white transition'
+                    to="/support"
                 >
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4e" className='mr-4' />
-                    Contacto
-                </NavLink>
-
-                <NavLink
-                    exact="true"
-                    activeclassname="active"
-                    className='block'
-                    to="/account"
-                >
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4e" className='mr-4' />
-                    Chat Online
+                    <FontAwesomeIcon icon={faCog} color="#4d4d4e" className='mr-4' />
+                    Soporte
                 </NavLink>
             </nav>
                 </div>

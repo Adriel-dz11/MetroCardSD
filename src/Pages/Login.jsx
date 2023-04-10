@@ -20,7 +20,7 @@ export const Login = () => {
   }
 
   return (
-    <div className='z-20 w-full h-full absolute bg-[#FFFEFC] flex'>
+    <div className='z-20 w-full h-full absolute bg-[#FFFEFC] flex transition'>
         <div className='w-[100%] h-full relative'>
             <img src={mapmetro} className='w-full h-full'/>
         </div>
@@ -28,7 +28,7 @@ export const Login = () => {
           <div className='absolute text-center w-full h-full '>
             <h1 className='text-right mr-10 mr-0 text-xl font-bold '>OPRET</h1>
             <h1 className='mx-auto mt-0 min-w-[300px] text-xl font-medium'>Welcome to OPRET App</h1>
-            <div className='mx-auto w-[329px] h-[59px] bg-[#a9a9af] mt-5 rounded-[33px] flex delay-300 transition-all'>
+            <div className='mx-auto w-[329px] h-[59px] bg-[#a9a9af] mt-5 rounded-[33px] flex delay-300 transition'>
               <button className={button ? 'ml-20 mr-8' : 'mt-2 ml-4  w-[146px] h-[40px] bg-[#181C32] text-white rounded-[33px]'} onClick={ActivateButton}>
                 Login
               </button>
