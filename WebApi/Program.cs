@@ -1,11 +1,16 @@
 using DB;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Net.Security;
 using System.Security.AccessControl;
 using System.Text;
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +41,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("NuevaPolitica", app =>
+    {
+        app.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost").AllowAnyHeader().AllowAnyMethod();
+    });;
+});
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -45,12 +58,16 @@ using (var scope = app.Services.CreateScope())
     context.Database.Migrate();
 }
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("NuevaPolitica");
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
