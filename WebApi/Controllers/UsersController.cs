@@ -1,5 +1,7 @@
 ﻿using DB;
+using DB.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
@@ -9,29 +11,34 @@ using WebApi.Dto;
 
 namespace WebApi.Controllers
 {
+
     [ApiController]
     [Route("user")]
     public class UsersController : ControllerBase
     {
+
         public IConfiguration _Configuration;
-        public UsersController(IConfiguration Configuration) 
+        private readonly IRepository<Users> _repository;
+
+
+        public UsersController(IConfiguration Configuration, IRepository<Users> repository)
         {
             _Configuration = Configuration;
-        
+            _repository = repository;
         }
 
         [HttpPost]
         [Route("login")]
-        public dynamic Login([FromBody] Object optData)
+        public dynamic Login([FromBody] LoginDto optData)
         {
-            var data = JsonConvert.DeserializeObject<dynamic>(optData.ToString());
-            string User = data.Users.ToString();
-            string Password = data.Password.ToString();
+            //var data = JsonConvert.DeserializeObject<dynamic>(optData.ToString());
+            string User = optData.User;
+            string Password = optData.password;
 
-            Users users = Users.DB().Where(x => x.User == User && x.Password == Password).FirstOrDefault();
+            Users users = _repository.GetFirstOrDefault(x => x.User == User && x.Password == Password);
 
-            if(users == null)
-    {
+            if (users == null)
+            {
                 return new
                 {
                     success = false,
@@ -40,7 +47,7 @@ namespace WebApi.Controllers
                 };
             }
 
-            var Jwt = _Configuration.GetSection("Jwt").Get <JwtDto>();
+            var Jwt = _Configuration.GetSection("Jwt").Get<JwtDto>();
 
             var claims = new[]
             {
@@ -60,7 +67,7 @@ namespace WebApi.Controllers
                 claims,
                 expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: singIn
-                
+
                 );
 
             return new
@@ -70,6 +77,46 @@ namespace WebApi.Controllers
                 Message = "Realizado con exito",
                 result = new JwtSecurityTokenHandler().WriteToken(token)
             };
+
+        }
+
+        [HttpPost]
+        [Route("register")]
+        public dynamic Register([FromBody] RegisterDto registerDto)
+        {
+            string user = registerDto.User;
+            string mail = registerDto.Mail;
+            Users users = _repository.GetFirstOrDefault(x => x.User == user || x.Mail == mail);
+
+            if (users != null)
+            {
+                return new
+                {
+                    success = false,
+                    messge = "Usuario ya registrado, intente con otro.",
+                    result = ""
+                };
+            }
+            Users usuario = new Users()
+            {
+                User = registerDto.User,
+                Password = registerDto.Password,
+                Name = registerDto.Name,
+                Cell = registerDto.Cell,
+                Mail = registerDto.Mail
+
+            };
+
+            var result = _repository.InsertAsync(usuario);
+
+            return new
+            {
+                success = false,
+                messge = "Usuario registrado",
+                result = ""
+            };
+        }
     }
-}
+
+
 }
