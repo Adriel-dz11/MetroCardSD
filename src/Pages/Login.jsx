@@ -1,22 +1,36 @@
 import React, { useState } from 'react'
 import line1 from '../Assets/Img/Line1.png'
 import mapmetro from '../Assets/Img/map.png'
-import { useSelector } from "react-redux";
+import useLogin from "../Components/Login/useLogin";
 
 export const Login = () => {
 
+  const { validateLogin, registerUser, getId, password, user, isValid, validationMessage, isButtonEnable} = useLogin()
   const [button, setButton] = useState(false)
 
   const ActivateButton = () =>{
     setButton(!button);
   }
 
-  const Register = () =>{
+  const Register = (e) =>{
+    e.preventDefault();
+    let target = e.target;
 
+    let name = target.name.value;
+    let mail = target.mail.value;
+    let tel= target.cellphone.value;
+    let usuario = target.user.value;
+    let pass = target.password.value;
+
+    registerUser(e,name,mail,tel,usuario,pass)
   }
 
-  const Login = ()=>{
-
+  const Login = (e)=>{
+    e.preventDefault();
+    let target = e.target;
+    let usuario = target.user.value;
+    let pass = target.password.value;
+    validateLogin(e,usuario,pass)
   }
 
   return (
@@ -38,28 +52,28 @@ export const Login = () => {
            </div>
           {button ? 
           <>
-              <form className='mt-6 max-w-[400px] mx-auto space-y-2'>
+              <form className='mt-6 max-w-[400px] mx-auto space-y-2' onSubmit={Register}>
                 <h1 className=''>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
                 <h1 className='text-left mt-4 ml-2 mb-2 font-bold '>Nombre</h1>
-                <input tpye="text" placeholder='Enter your Name' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input tpye="text" name="name" placeholder='Enter your Name' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Mail</h1>
-                <input tpye="text" placeholder='Enter your Email Address' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input tpye="text" name="mail" placeholder='Enter your Email Address' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Cellphone</h1>
-                <input tpye="text" placeholder='Enter your Cellphone' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input tpye="text" name="cellphone" placeholder='Enter your Cellphone' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Username</h1>
-                <input tpye="text" placeholder='Enter your Username' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input tpye="text" name="user" placeholder='Enter your Username' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Password</h1>
-                <input tpye="text" placeholder='Enter your Password' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
-                <input type="submit" value='Register' className='w-[146px] h-[40px] bg-[#181C32] text-white rounded-[33px] cursor-pointer'/>
+                <input tpye="text" name="password" placeholder='Enter your Password' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input  type="submit" value='Register' className='w-[146px] h-[40px] bg-[#181C32] text-white rounded-[33px] cursor-pointer'/>
             </form>
             </>
             :
-            <form className='mt-20 max-w-[400px] mx-auto space-y-4'>
+            <form className='mt-20 max-w-[400px] mx-auto space-y-4' onSubmit={Login}>
             <h1 className=''>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
             <h1 className='text-left ml-2 mb-2 font-bold '>Username</h1>
-            <input tpye="text" placeholder='Enter your Username' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[54px] pl-4'/>
+            <input tpye="text" name='user' placeholder='Enter your Username' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[54px] pl-4'/>
             <h1 className='text-left ml-2 mb-2 font-bold '>Password</h1>
-            <input tpye="text" placeholder='Enter your Password' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[54px] pl-4'/>
+            <input tpye="text" name='password' placeholder='Enter your Password' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[54px] pl-4'/>
             <input type="submit" value='Login' className='w-[146px] h-[40px] bg-[#181C32] text-white rounded-[33px] cursor-pointer'/>
         </form>
         }

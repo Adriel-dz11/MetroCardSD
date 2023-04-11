@@ -8,13 +8,16 @@ import { Error } from '../Pages/Error'
 import { Home } from '../Pages/Home'
 import { Login } from '../Pages/Login'
 import { Payments } from '../Pages/Payments'
+import { useDispatch, useSelector } from "react-redux";
 
 export const Route = () => {
 
-  const [login, setLogin] = useState(true)
+  const [login, setLogin] = useState(false)
+  
+  const isAuthenticated = useSelector(state => state.generalState.isAuthenticated);
   return (
     < BrowserRouter >
-      {login ?
+      {isAuthenticated ?
       <>
         <div className='menu'>
           <SideBar />
