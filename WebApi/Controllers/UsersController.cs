@@ -31,8 +31,8 @@ namespace WebApi.Controllers
                 };
             }
 
-            var Jwt = _Configuration.GetSection("Jwt").Get <JwtDto>(); 
-
+            var Jwt = _Configuration.GetSection("Jwt").Get <JwtDto>();
+            return null;
     }
 }
 }

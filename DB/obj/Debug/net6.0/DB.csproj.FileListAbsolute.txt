@@ -26,3 +26,17 @@ C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Améri
 C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\DB\obj\Debug\net6.0\DB.pdb
 C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\DB\obj\Debug\net6.0\DB.genruntimeconfig.cache
 C:\Users\default.LAPTOP-21O79P2R\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Documentos\GitHub\MetroCardSD\DB\obj\Debug\net6.0\ref\DB.dll
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\bin\Debug\net6.0\DB.deps.json
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\bin\Debug\net6.0\DB.runtimeconfig.json
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\bin\Debug\net6.0\DB.dll
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\bin\Debug\net6.0\DB.pdb
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.csproj.AssemblyReference.cache
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.AssemblyInfoInputs.cache
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.AssemblyInfo.cs
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.csproj.CoreCompileInputs.cache
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.dll
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\refint\DB.dll
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.pdb
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\DB.genruntimeconfig.cache
+C:\Users\default.LAPTOP-21O79P2R\Downloads\Backend\MetroCardSD\DB\obj\Debug\net6.0\ref\DB.dll
