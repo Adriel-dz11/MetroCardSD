@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\DB.csproj": {}
+    "C:\\Users\\ACORONADO\\Desktop\\CardAPis\\MetroCardSD\\DB\\DB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\DB.csproj": {
+    "C:\\Users\\ACORONADO\\Desktop\\CardAPis\\MetroCardSD\\DB\\DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\DB.csproj",
+        "projectUniqueName": "C:\\Users\\ACORONADO\\Desktop\\CardAPis\\MetroCardSD\\DB\\DB.csproj",
         "projectName": "DB",
-        "projectPath": "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\DB.csproj",
-        "packagesPath": "C:\\Users\\Clara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clara\\source\\repos\\WebApi\\DB\\obj\\",
+        "projectPath": "C:\\Users\\ACORONADO\\Desktop\\CardAPis\\MetroCardSD\\DB\\DB.csproj",
+        "packagesPath": "C:\\Users\\ACORONADO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACORONADO\\Desktop\\CardAPis\\MetroCardSD\\DB\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Clara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACORONADO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

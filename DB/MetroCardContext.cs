@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DB.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DB
 {
