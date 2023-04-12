@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import line1 from '../Assets/Img/Line1.png'
-import mapmetro from '../Assets/Img/map.png'
-import useLogin from "../Components/Login/useLogin";
+import line1 from '../../Assets/Img/Line1.png'
+import mapmetro from '../../Assets/Img/map.png'
+import useLogin from "../../Components/Login/useLogin";
 
 export const Login = () => {
 

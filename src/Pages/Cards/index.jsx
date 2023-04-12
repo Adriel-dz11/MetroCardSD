@@ -1,20 +1,20 @@
 import React from 'react'
-import cardPayment from '../Assets/Img/cardPayment.png'
+import cardMetro from '../../Assets/Img/cardMetro.png'
 
-export const Payments = () => {
+export const Cards = () => {
   return (
     <div className=''>
-      <h1 className='text-[26px]'> Metodos de Pagos</h1>
+      <h1 className='text-[26px]'> Metro Cards</h1>
       <div className='flex flex-wrap'>
 
         {/* Card */}
         <div className='pr-20 pl-2 mt-10'>
 
           <div className='w-[350px] h-[220px] rounded-[20px] '>
-            <img src={cardPayment} className="absolute" />
+            <img src={cardMetro} className="absolute" />
             <div className='absolute'>
-              <h1 className='text-white ml-4 mt-24 relative text-[24px] tracking-widest'>1234  5678  9101  1121</h1>
-              <h1 className='text-white ml-4 mt-12 relative'>Alexander Coronado</h1>
+              <h1 className='text-white ml-4 mt-4 relative'>Card ID: 111111112332</h1>
+              <h1 className='text-white ml-60 mt-40 relative'>Saldo: 7000</h1>
             </div>
           </div>
           
