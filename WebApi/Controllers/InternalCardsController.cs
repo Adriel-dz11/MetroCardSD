@@ -2,21 +2,25 @@
 using Microsoft.AspNetCore.Http;
 using DB;
 using DB.Models;
+using DB.Repository;
 
 namespace WebApi.Controllers
 {
 
     [Produces("application/json")]
-    [Route("Swagger/Internal")]
+    [Route("api/[controller]/[action]")]
     public class InternalCardsController : ControllerBase
     {
 
 
         private MetroCardContext _context;
 
-        public InternalCardsController(MetroCardContext context)
+        private readonly IRepository<InternalCards> _repository;
+
+        public InternalCardsController(MetroCardContext context, IRepository<InternalCards> repository)
         {
             _context = context;
+            _repository = repository;
         }
 
         //get que atraiga el listado de todas las tarjetas
@@ -39,19 +43,33 @@ namespace WebApi.Controllers
 
             return Ok(card);
         }
+
+
+        ////Petición para Anadir una tarjeta del metro 
+        //[HttpPost]
+        //public IActionResult Post([FromBody] InternalCards card)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.InternalCards.Add(card);
+        //        _context.SaveChanges();
+        //        return new CreatedAtRouteResult("cardCreada", new { id = card.CardID }, card);
+        //    }
+        //    return BadRequest(ModelState);
+
+        //}
+
         //Petición para Anadir una tarjeta del metro 
         [HttpPost]
-        public IActionResult Post([FromBody] InternalCards card)
+        public async Task<bool> NewCard([FromBody] InternalCards card)
         {
-            if (ModelState.IsValid)
-            {
-                _context.InternalCards.Add(card);
-                _context.SaveChanges();
-                return new CreatedAtRouteResult("cardCreada", new { id = card.CardID }, card);
-            }
-            return BadRequest(ModelState);
+            await _repository.InsertAsync(card);
+
+            return false;
 
         }
+
+
         //Petición para modificar una tarjeta del metro 
         [HttpPut("{id}")]
         public IActionResult UpdateCards([FromBody] InternalCards card, int id)

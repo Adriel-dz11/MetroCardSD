@@ -43,6 +43,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("NuevaPolitica", app =>
     {
         app.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost").AllowAnyHeader().AllowAnyMethod();
+        app.SetIsOriginAllowed(origin => new Uri(origin).Host == "http://localhost").AllowAnyHeader().AllowAnyMethod();
+        app.SetIsOriginAllowed(origin => new Uri(origin).Host == "http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
     }); ;
 });
 
@@ -64,7 +66,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
-
+app.UseCors();
+app.UseCors("NuevaPolitica");
 app.UseAuthorization();
 
 app.MapControllers();
