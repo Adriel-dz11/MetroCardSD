@@ -10,15 +10,16 @@ namespace DB.Models
 {
     public class InternalCards
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CardID { get; set; }
+        public Guid CardID { get; set; }
         public int Amount { get; set; }
         public int Travels { get; set; }
         public bool IsValid { get; set; }
 
         [ForeignKey("UserID")]
-        public virtual Users Users { get; set; }
+        public int  Users { get; set; }
 
     }
 }

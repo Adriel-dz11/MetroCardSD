@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace DB.Repository
 {
@@ -55,6 +56,8 @@ namespace DB.Repository
         /// Update entity async in db
         /// </summary>
         /// <param name="entity"></param>
-        Task UpdateAsync(TEntity entity);         
-    }
+        Task UpdateAsync(TEntity entity);
+        IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null, bool disableTracking = true);
+        IQueryable<TEntity> GetAll(string includeProperties, Expression<Func<TEntity, bool>> predicate = null);
+    }
 }

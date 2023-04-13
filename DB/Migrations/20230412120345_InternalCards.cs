@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -38,32 +39,20 @@ namespace DB.Migrations
                 name: "InternalCards",
                 columns: table => new
                 {
-                    CardID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CardID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Amount = table.Column<int>(type: "int", nullable: false),
                     Travels = table.Column<int>(type: "int", nullable: false),
                     IsValid = table.Column<bool>(type: "bit", nullable: false),
-                    UserID = table.Column<int>(type: "int", nullable: false)
+                    Users = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_InternalCards", x => x.CardID);
-                    table.ForeignKey(
-                        name: "FK_InternalCards_Users_UserID",
-                        column: x => x.UserID,
-                        principalTable: "Users",
-                        principalColumn: "Id_User",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ExternalCard_UserID",
                 table: "ExternalCard",
-                column: "UserID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_InternalCards_UserID",
-                table: "InternalCards",
                 column: "UserID");
         }
 
