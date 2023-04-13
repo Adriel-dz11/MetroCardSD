@@ -5,6 +5,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { useLoading } from "../../hooks/useLoading";
 import { useDispatch } from 'react-redux';
 import {setIsAuthenticated }from '../../Redux/generalStateSlice'
+import {setAuthToken }from '../../Redux/generalStateSlice'
 import http from '../../services/httpAxios';
 
 const useLogin = () => {
@@ -12,39 +13,36 @@ const useLogin = () => {
     const context = useOutletContext()
     const AuthenticationDispatch = useDispatch()
     const { setLoading } = useLoading()
-    const [password, setPassword] = useState("");
-    const [user, setUser] = useState("");
     const [isValid, setisValid] = useState(true);
     const [validationMessage, setvalidationMessage] = useState("");
-    const [trackId, setTrackId] = useState();
 
     useEffect(() => {
         setLoading(false)
     }, []);
-    const getId = (event) => {
-
-    }
 
     const validateLogin = async (event, usuario, pass) => {
-        setLoading(true);
         const input = {
             user: usuario,
             password: pass
         }
-        let response = await http.post("user/login", input).catch(error => {
+        setLoading(true);
+        let response = await http.post("user/login", input ).catch(error => {
             setLoading(false)
-            context.openPopupWithMessage('Lo sentimos su solicitud no ha podido ser procesada')
+            context.openPopup('internet')
         })
         const { message, result, success } = response.data;
         if (success == true) {
             navigate("/Home");
+            AuthenticationDispatch(setAuthToken(result));
             AuthenticationDispatch(setIsAuthenticated(true))
-            console.log("Ha iniciado sesion correctamente")
+            context.openPopup('welcome')
         } else {
-            console.log("Clave o usuario incorrectos")
+            context.openPopup('incorrect')
         }
+        setTimeout(function() {
+            setLoading(false)
+        }, 10000)
         setisValid(false);
-        setLoading(false);
     }
 
     const registerUser = async (event, name, mail, tel,usuario, pass) =>{
@@ -58,16 +56,16 @@ const useLogin = () => {
         }
         let response = await http.post("user/register", input).catch(error => {
             setLoading(false)
-            context.openPopupWithMessage('Lo sentimos su solicitud no ha podido ser procesada')
+            context.openPopup('internet')
         })
         const { message, result, success } = response.data;
         if (success == true) {
             //Poner popup de informacion y un loop de carga
             navigate("/Home");
             AuthenticationDispatch(setIsAuthenticated(true))
-            console.log("Ha iniciado sesion correctamente")
+            context.openPopup('register')
         } else {
-            console.log("Clave o usuario incorrectos")
+            context.openPopup('internet')
         }
         setisValid(false);
         setLoading(false);
@@ -78,6 +76,6 @@ const useLogin = () => {
     }
 
 
-    return { validateLogin, getId, CloseSession, registerUser, password, user, isValid, validationMessage }
+    return { validateLogin, CloseSession, registerUser, isValid, validationMessage }
 }
 export default useLogin;

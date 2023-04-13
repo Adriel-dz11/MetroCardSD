@@ -3,7 +3,7 @@ import cardPayment from '../../Assets/Img/cardPayment.png'
 
 export const Payments = () => {
   return (
-    <div className=''>
+    <div className=' '>
       <h1 className='text-[26px]'> Metodos de Pagos</h1>
       <div className='flex flex-wrap'>
 

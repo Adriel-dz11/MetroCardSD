@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, Link, Navigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faFileAlt, faBriefcase, faCog } from '@fortawesome/free-solid-svg-icons'
-import useLogin from "../Components/Login/useLogin";
+import useLogin from "../Login/useLogin";
 
 export const Header = () => {
     
@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <section>
-        <div className='w-full ml-[280px] h-[75px] bg-white drop-shadow-xl fixed flex'>
+        <div className='w-full ml-[280px] h-[75px] bg-white drop-shadow-xl fixed flex justify-between'>
         <nav className='text-[#707388] ml-20 mt-6 space-x-16 flex'>
                 <NavLink
                     exact="true"
@@ -59,7 +59,7 @@ export const Header = () => {
                 </NavLink>
             </nav>
 
-            <button onClick={CloseSession} className='w-[166px] h-[40px] bg-[#181C32] mt-4 ml-60 2xl:ml-100 text-[#FFFFFF] rounded-[25px]'>Cerrar Session</button>
+            <button onClick={CloseSession} className='w-[166px] mr-[350px] mt-4 h-[40px] bg-[#181C32]  text-[#FFFFFF] rounded-[25px]'>Cerrar Session</button>
         </div>
     </section>
   )

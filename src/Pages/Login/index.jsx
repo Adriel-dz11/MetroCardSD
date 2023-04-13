@@ -55,15 +55,15 @@ export const Login = () => {
               <form className='mt-6 max-w-[400px] mx-auto space-y-2' onSubmit={Register}>
                 <h1 className=''>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
                 <h1 className='text-left mt-4 ml-2 mb-2 font-bold '>Nombre</h1>
-                <input tpye="text" name="name" placeholder='Enter your Name' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input type="mail" name="name" placeholder='Enter your Name' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Mail</h1>
-                <input tpye="text" name="mail" placeholder='Enter your Email Address' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input type="text" name="mail" placeholder='Enter your Email Address' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Cellphone</h1>
-                <input tpye="text" name="cellphone" placeholder='Enter your Cellphone' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input type="text" name="cellphone" placeholder='Enter your Cellphone' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Username</h1>
-                <input tpye="text" name="user" placeholder='Enter your Username' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input type="text" name="user" placeholder='Enter your Username' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <h1 className='text-left ml-2 mb-2 font-bold '>Password</h1>
-                <input tpye="text" name="password" placeholder='Enter your Password' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
+                <input type="text" name="password" placeholder='Enter your Password' className='border-2 border[#181C32] rounded-[40px] w-[435px] h-[44px] pl-4'/>
                 <input  type="submit" value='Register' className='w-[146px] h-[40px] bg-[#181C32] text-white rounded-[33px] cursor-pointer'/>
             </form>
             </>

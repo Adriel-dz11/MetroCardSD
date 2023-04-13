@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import {useLocation, useNavigate, useParams} from "react-router-dom";
-import UsePopUp from "../PopUp/usePopUp";
+import UsePopUp from "../Popup/usePopup";
 
 
 const UseLayout = () => {
